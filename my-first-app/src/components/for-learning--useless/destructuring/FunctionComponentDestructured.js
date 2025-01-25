@@ -16,7 +16,7 @@ const FunctionComponentDestructured = props => {
     const {className, message} = props;
 
     return (
-    <h1 className={className}>{message}</h1>
+        <h1 className={className}>{message}</h1>
     )
 }
 

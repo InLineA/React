@@ -11,7 +11,7 @@ export class Hello extends Component {
 
     render() {
         return(
-            this.state.isLoggedIn && <h1>Hello, USER</h1>
+            this.state.isLoggedIn ? <h1>Hello, USER</h1> : <h1>Hello, UNKNOWN GUEST</h1>
         )
     }
 }
