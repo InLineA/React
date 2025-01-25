@@ -28,15 +28,8 @@ class ClassComponent extends Component {
     
     clickHandler = () => {
         this.setState(
-            () => ({
-                message: 'Second message'
-            }),
-            () => {
-                console.log('state has been changed')
-            }
+            {message: 'Second message'}
         )
-
-        console.log(this);
     }
     
 
