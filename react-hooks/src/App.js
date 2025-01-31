@@ -1,11 +1,10 @@
 import './App.css';
-import ArrayAsState from './components/useState/ArrayAsState';
-
+import HookTimer from './components/useEffect/HookTimer';
 
 function App() {
   return (
     <div>
-      <ArrayAsState />
+      <HookTimer />
     </div>
   );
 }
