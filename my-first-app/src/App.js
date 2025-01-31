@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
-import ClickCounter from './components/for-learning--useless/higher-order-components/ClickCounter';
-import HoverCounter from './components/for-learning--useless/higher-order-components/HoverCounter';
-import KeyPressCounter from './components/for-learning--useless/higher-order-components/KeyPressCounter';
+import ComponentC from './components/for-learning--useless/context/ComponentC';
+import { UserProvider } from './components/for-learning--useless/context/userContext';
+
 
 function App() {
   return (
     <div className="App">
-      <ClickCounter countNumber={5} />
-      <HoverCounter />
-      <KeyPressCounter countNumber={2} />
-    </div>
+      <UserProvider value="Yauheni">
+        <ComponentC />
+      </UserProvider>
+    </div>  
   );
 }
 
