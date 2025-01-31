@@ -5,16 +5,26 @@ function ArrayAsState() {
     const [items, setItems] = useState([])
 
     const addItem = () => {
-        setItems( [...items, {
+        let value = currentText
+        if(value === 'козявочка'){
+            value='samka bogomola';
+        }
+        setItems([...items, {
             id: items.length,
-            value: currentText
-        }] )
+            value: value
+        }])
         setCurrentText('')
+    }
+
+    const enterPressed = (event) => {
+        if (event.key === 'Enter'){
+            addItem()
+        }
     }
 
     return (
         <div>
-            <input type='text' value={currentText} onChange={(event) => {setCurrentText(event.target.value)}}/>
+            <input type='text' value={currentText} onKeyDown={(event) => enterPressed(event)} onChange={(event) => { setCurrentText(event.target.value) }} />
             <button onClick={addItem}>Add text</button>
             <ul>
                 {
