@@ -2,7 +2,7 @@ import React, { useEffect, useReducer, useState } from 'react'
 import axios from 'axios'
 
 const initialValue = []
-const dispatch = (currentState, action) => {
+const reducer = (currentState, action) => {
     switch(action.type){
         case 'append':
             return [ ...currentState, action.post ]
@@ -18,7 +18,7 @@ const dispatch = (currentState, action) => {
 }
 
 function DataFetchingReducer() {
-    const [posts, dispatchPosts] = useReducer(dispatch, initialValue)
+    const [posts, dispatchPosts] = useReducer(reducer, initialValue)
 
     //initial data fetch
     useEffect(() => {
@@ -48,7 +48,7 @@ function DataFetchingReducer() {
             <h1>DataFetching with useReducer() hook</h1>
             <input type='text' value={inputText} onChange={(e) => {setInputText(e.target.value)}} />
             <button onClick={() => setId(inputText)} >Append</button>
-            {/* If have posts data will render it as unOrderedList */}
+            {/* Posts renser */}
             {    
                 posts.length ?
                 <ul>{
