@@ -1,11 +1,11 @@
 import './App.css';
-import DataFetchingReducer from './components/DataFetchingReducer';
+import DataFetchingReducerPropper from './components/DataFetchingReducerPropper';
 
 
 function App() {
   return (
     <div className="App">
-      <DataFetchingReducer />
+      <DataFetchingReducerPropper />
     </div>
   );
 }
