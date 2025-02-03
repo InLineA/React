@@ -1,10 +1,12 @@
 import React from 'react';
-import Conter from './components/useMemo/Conter';
+import ClassTimer from './components/useRef/ClassTimer';
+import HookTimer from './components/useRef/HookTimer';
 
 function App() {
   return (
     <div>
-      <Conter />
+      <ClassTimer />
+      <HookTimer />
     </div>
   );
 }
